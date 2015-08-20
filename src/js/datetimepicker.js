@@ -234,7 +234,7 @@
 
               var selectedDate = moment.utc(unixDate);
               var startOfMonth = moment.utc(selectedDate).startOf('month');
-              var previousViewDate = moment.utc(selectedDate).startOf('year');
+              var previousViewDate = moment.utc(selectedDate).startOf('month');
               var endOfMonth = moment.utc(selectedDate).endOf('month');
 
               var startDate = moment.utc(startOfMonth).subtract(Math.abs(startOfMonth.weekday()), 'days');
@@ -281,7 +281,7 @@
 
             hour: function hour(unixDate) {
               var selectedDate = moment.utc(unixDate).startOf('day');
-              var previousViewDate = moment.utc(selectedDate).startOf('month');
+              var previousViewDate = moment.utc(selectedDate).startOf('day');
 
               var activeFormat = ngModelController.$modelValue ? moment(ngModelController.$modelValue).format('YYYY-MM-DD H') : '';
 
@@ -314,7 +314,7 @@
 
             minute: function minute(unixDate) {
               var selectedDate = moment.utc(unixDate).startOf('hour');
-              var previousViewDate = moment.utc(selectedDate).startOf('day');
+              var previousViewDate = moment.utc(selectedDate).startOf('hour');
               var activeFormat = ngModelController.$modelValue ? moment(ngModelController.$modelValue).format('YYYY-MM-DD H:mm') : '';
 
               var result = {
